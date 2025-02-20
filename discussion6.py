@@ -85,6 +85,7 @@ def get_month_avg(d):
             c=c+1
         avg=round(s/c)
         dic[key]=avg
+    return dic
 
     pass
 
