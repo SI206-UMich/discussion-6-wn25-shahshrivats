@@ -76,7 +76,15 @@ def get_month_avg(d):
     Note: Don't strip or otherwise modify strings. Do not change datatypes except where necessary. 
         You'll have to make the vals int or float here and round the avg to pass tests.
     '''
-    
+    dic={}
+    for key, value in d.items():
+        s=0
+        c=0
+        for month, val in value.items():
+            s=s+int(val)
+            c=c+1
+        avg=round(s/c)
+        dic[key]=avg
 
     pass
 
