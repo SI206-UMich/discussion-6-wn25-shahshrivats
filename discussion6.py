@@ -51,6 +51,16 @@ def get_annual_max(d):
     Note: Don't strip or otherwise modify strings. Do not change datatypes except where necessary.
         You'll have to change vals to int to compare them. 
     '''
+    lst=[]
+    for key,  value in d.items():
+        max=float('-inf')
+        for month, val in value.items():
+            if int(val)>max:
+                max=int(val)
+                max_month=month
+        lst.append((key,max_month,max))
+    return lst
+        
     
     pass
 
